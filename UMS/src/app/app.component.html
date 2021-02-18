@@ -1,0 +1,13 @@
+<h1>User Management system</h1>
+<a href="#" (click) = "newUser()">New User</a>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class = "col-8">
+            <app-users (updateUser) = "updateUser($event)"></app-users><!--il padre rilancia l'evento del figlio così che app.componet possa settare la variabile userSelected-->
+        </div> 
+    <div class="col-4" *ngIf="showForm" >
+        <app-user-detail [user]="userSelected" class="userDetail" ></app-user-detail>
+    </div>
+</div>
+</div>
